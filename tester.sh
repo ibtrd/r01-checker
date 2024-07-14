@@ -1,5 +1,7 @@
 #!/bin/bash
 
+make
+
 if [ $# -gt 0 ]
 then
 	SIZE=$1
