@@ -13,7 +13,7 @@ fi
 
 while [ 1 ]
 do
-	ARG=$(python3 generator.py $SIZE | head -1)
+	ARG=$(python3 generator.py $SIZE | head -1 | xargs)
 	echo -n $ARG " "
 	../rush-01 "$ARG" | ./checker "$ARG" 1>/dev/null
 	if [ $? -eq 0 ]
